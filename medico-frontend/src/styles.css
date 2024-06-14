@@ -1,0 +1,215 @@
+body {
+  margin: 0; /* Remove a margem padrão do corpo da página */
+  padding: 0; /* Remove o padding padrão do corpo da página */
+  font-family: Arial, sans-serif; /* Define a família de fontes para o corpo da página */
+  background: url("./Images/clinica.jpg") no-repeat center center fixed; /* Define a imagem de fundo, centralizada e fixa */
+  background-size: cover; /* Define que a imagem de fundo cobre toda a área disponível */
+}
+
+.container {
+  display: flex; /* Define um contêiner flexível */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Alinha os itens ao centro */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  min-height: 50vh; /* Define a altura mínima como 100% da altura da viewport */
+  padding: 20px; /* Adiciona padding ao redor do contêiner */
+  padding-top: 100px; /* Adiciona padding extra no topo para dar espaço ao cabeçalho */
+}
+
+form {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Define o fundo do formulário com transparência */
+  padding: 20px; /* Adiciona padding dentro do formulário */
+  border-radius: 10px; /* Define bordas arredondadas */
+  width: 300px; /* Define a largura do formulário */
+  margin: 20px; /* Adiciona margem ao redor do formulário */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao formulário */
+}
+
+h2 {
+  text-align: center; /* Centraliza o texto */
+  color: #333; /* Define a cor do texto */
+  font-size: large;
+}
+
+label {
+  display: block; /* Faz o label ocupar toda a largura disponível */
+  margin: 10px 0 5px; /* Adiciona margem acima e abaixo do label */
+  color: #333; /* Define a cor do texto do label */
+}
+
+select,
+button {
+  width: 100%; /* Define a largura dos elementos como 100% */
+  padding: 10px; /* Adiciona padding dentro dos elementos */
+  margin: 10px 0; /* Adiciona margem acima e abaixo dos elementos */
+  border-radius: 5px; /* Define bordas arredondadas */
+  border: 1px solid #ccc; /* Define a cor da borda */
+  box-sizing: border-box; /* Inclui o padding e a borda no tamanho total do elemento */
+}
+
+select:focus,
+button:focus {
+  outline: none; /* Remove a borda de foco padrão */
+  border-color: #007bff; /* Define a cor da borda ao focar */
+}
+
+button {
+  background-color: #007bff; /* Define a cor de fundo do botão */
+  color: white; /* Define a cor do texto do botão */
+  border: none; /* Remove a borda padrão do botão */
+  cursor: pointer; /* Muda o cursor para indicar que o elemento é clicável */
+  transition: background-color 0.3s ease; /* Adiciona transição suave para a cor de fundo */
+}
+
+button:hover {
+  background-color: #0056b3; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.lista-medicos {
+  background: rgba(255, 255, 255, 0.8); /* Define o fundo com transparência */
+  padding: 20px; /* Adiciona padding dentro do contêiner */
+  border-radius: 10px; /* Define bordas arredondadas */
+  width: 80%; /* Define a largura como 80% */
+  max-width: 800px; /* Define a largura máxima */
+  margin: 20px auto; /* Centraliza o contêiner horizontalmente e adiciona margem vertical */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao contêiner */
+}
+
+.medico-list {
+  list-style: none; /* Remove o estilo padrão da lista */
+  padding: 0; /* Remove o padding padrão */
+  margin: 0; /* Remove a margem padrão */
+  display: flex; /* Define um contêiner flexível */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Centraliza os itens */
+}
+
+.medico-item {
+  background: #f9f9f9; /* Define a cor de fundo */
+  padding: 15px; /* Adiciona padding dentro do item */
+  margin: 10px 0; /* Adiciona margem acima e abaixo do item */
+  border-radius: 5px; /* Define bordas arredondadas */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao item */
+  width: 100%; /* Define a largura como 100% */
+  max-width: 600px; /* Define a largura máxima */
+}
+
+.medico-info {
+  color: #333; /* Define a cor do texto */
+}
+
+.medico-info h3 {
+  margin: 0 0 5px; /* Adiciona margem abaixo do título */
+}
+
+.medico-info p {
+  margin: 0; /* Remove a margem padrão */
+}
+
+.action-buttons {
+  display: flex; /* Define um contêiner flexível */
+  justify-content: flex-end; /* Alinha os botões à direita */
+  gap: 10px; /* Adiciona espaço entre os botões */
+  margin-top: 10px; /* Adiciona espaço entre as informações e os botões */
+}
+
+.edit-button,
+.delete-button {
+  padding: 4px 8px; /* Reduz o padding dos botões */
+  font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Define bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que o elemento é clicável */
+  transition: background-color 0.3s ease; /* Adiciona transição suave para a cor de fundo */
+  width: auto; /* Garante que os botões não ocupem toda a largura */
+}
+
+.edit-button {
+  background-color: #28a745; /* Define a cor de fundo */
+  color: white; /* Define a cor do texto */
+  opacity: 0.8; /* Define a opacidade */
+}
+
+.edit-button:hover {
+  background-color: #218838; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.delete-button {
+  background-color: #dc3545; /* Define a cor de fundo */
+  color: white; /* Define a cor do texto */
+  opacity: 0.5; /* Define a opacidade */
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.edit-form {
+  background: rgba(255, 255, 255, 0.8); /* Define o fundo com transparência */
+  padding: 20px; /* Adiciona padding dentro do formulário */
+  border-radius: 10px; /* Define bordas arredondadas */
+  width: 300px; /* Define a largura */
+  margin: 20px auto; /* Centraliza o formulário horizontalmente e adiciona margem vertical */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao formulário */
+}
+
+.update-button,
+.cancel-button {
+  padding: 6px 10px; /* Reduz o padding dos botões */
+  font-size: 0.875rem; /* Ajusta o tamanho da fonte */
+  margin-top: 10px; /* Adiciona margem no topo */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Define bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que o elemento é clicável */
+  width: 100%; /* Define a largura como 100% */
+  transition: background-color 0.3s ease; /* Adiciona transição suave para a cor de fundo */
+}
+
+.update-button {
+  background-color: #007bff; /* Define a cor de fundo */
+  color: white; /* Define a cor do texto */
+}
+
+.update-button:hover {
+  background-color: #0056b3; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.cancel-button {
+  background-color: #6c757d; /* Define a cor de fundo */
+  color: white; /* Define a cor do texto */
+}
+
+.cancel-button:hover {
+  background-color: #5a6268; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.8); /* Define o fundo com transparência */
+  padding: 20px; /* Adiciona padding dentro do cabeçalho */
+  width: 100%; /* Define a largura como 100% */
+  display: flex; /* Define um contêiner flexível */
+  justify-content: space-between; /* Distribui os itens com espaço entre eles */
+  align-items: center; /* Alinha os itens ao centro verticalmente */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao cabeçalho */
+  position: fixed; /* Mantém o cabeçalho fixo no topo */
+  top: 0; /* Posiciona o cabeçalho no topo */
+  z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.header img {
+  width: 150px; /* Define a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  opacity: 0.8; /* Define a opacidade para criar uma marca d'água */
+}
+
+.header h1 {
+  font-size: 1.5em; /* Define o tamanho da fonte */
+  color: #333; /* Define a cor do texto */
+  margin: 0; /* Remove a margem padrão */
+  opacity: 0.8; /* Define a opacidade para criar uma marca d'água */
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Avaliação Bit</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <h1>Sistema "MEDICO" SENAI</h1>
+    <form action="#" th:action="@{/medico}" th:object="${medico}" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" th:field="*{nome}" />
+        <label for="crm">CRM:</label>
+        <input type="text" id="crm" name="crm" th:field="*{crm}" />
+        <button type="submit">GRAVAR</button>
+    </form>
+</body>
+</html>
